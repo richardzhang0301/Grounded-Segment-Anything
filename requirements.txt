@@ -1,0 +1,48 @@
+accelerate
+addict
+diffusers
+gradio==3.36.1
+huggingface_hub
+matplotlib
+numpy
+onnxruntime
+opencv_python
+Pillow
+pycocotools
+PyYAML
+requests
+setuptools
+supervision
+termcolor
+timm
+torch==2.0.0
+torchvision==0.15.1
+
+gevent
+yapf
+numba
+scipy 
+safetensors
+pynvml
+sentencepiece
+loguru
+
+transformers==4.27.4
+# transformers@git+https://github.com/huggingface/transformers.git@main
+
+# lama-cleaner==1.2.4
+lama-cleaner@git+https://github.com/yizhangliu/lama-cleaner.git@main
+
+mmcv==2.0.0
+mmengine
+openmim==0.3.9
+
+# tiktoken
+# einops
+# transformers_stream_generator==0.0.4
+# tensorboard
+# bitsandbytes
+# auto-gptq
+
+tencentcloud-sdk-python
+
