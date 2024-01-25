@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "grounded-segment-anything"
+version = "0.1.0"
+description = ""
+authors = ["Richard Zhang <richard.zh@linquet.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+accelerate = "*"
+addict = "*"
+diffusers = "*"
+gradio = "3.36.1"
+huggingface_hub = "*"
+matplotlib = "*"
+numpy = "*"
+onnxruntime = "*"
+opencv_python = "*"
+Pillow = "*"
+pycocotools = "*"
+PyYAML = "*"
+requests = "*"
+setuptools = "*"
+supervision = "*"
+termcolor = "*"
+timm = "*"
+torch = "2.0.0"
+torchvision = "0.15.1"
+gevent = "*"
+yapf = "*"
+numba = "*"
+scipy = "*"
+safetensors = "*"
+pynvml = "*"
+sentencepiece = "*"
+loguru = "*"
+transformers = "4.27.4"
+mmcv = "2.0.0"
+mmengine = "*"
+openmim = "0.3.9"
+GroundingDINO = "*"
+
+# Dependencies from Git repositories
+lama-cleaner = { git = "https://github.com/yizhangliu/lama-cleaner.git", branch = "main" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
