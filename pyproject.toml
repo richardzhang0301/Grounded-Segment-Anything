@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "grounded-segment-anything"
+name = "Grounded-Segment-Anything"
 version = "0.1.0"
 description = ""
 authors = ["Richard Zhang <richard.zh@linquet.com>"]
