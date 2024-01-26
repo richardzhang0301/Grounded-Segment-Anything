@@ -1,1 +1,1 @@
-from app_cli import predict_segment_mask
+from grounded_segment_anything.app_cli import predict_segment_mask
