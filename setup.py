@@ -1,4 +1,4 @@
-import setuptools
+from setuptools import setup, find_packages
 from pathlib import Path
 
 with open("README.md", "r", encoding="utf-8") as fh:
@@ -20,7 +20,7 @@ DESCRIPTION = 'Forked wrapped Ground Segment Anything'
 LONG_DESCRIPTION = 'Forked wrapped Ground Segment Anything'
 
 # Setting up
-setuptools.setup(
+setup(
     name="grounded-segment-anything",
     version=VERSION,
     author="Richard Zhang",
@@ -28,7 +28,7 @@ setuptools.setup(
     description=DESCRIPTION,
     long_description_content_type="text/markdown",
     long_description=long_description,
-    package_data={"grounded_segment_anything"},
+    ackages=find_packages(),
     install_requires=load_requirements(),
     python_requires=">=3.7",
     classifiers=[
