@@ -88,6 +88,36 @@ def get_args():
     args = argparser.parse_args()
     return args
 
+def predict_segment_mask(input_image, text):
+    logger.info(f'loading models ... ')
+    print(dir())
+    #set_device(args)  # If you have enough GPUs, you can open this comment
+    load_groundingdino_model(device)
+    load_sam_model(device)
+    # load_sd_model(device)
+    load_lama_cleaner_model(device)
+    # load_ram_model(device)
+
+    run_rets = run_anything_task(input_image = input_image, 
+                        text_prompt = text,  
+                        task_type = 'remove', 
+                        inpaint_prompt = '', 
+                        box_threshold = 0.3, 
+                        text_threshold = 0.25, 
+                        iou_threshold = 0.8, 
+                        inpaint_mode = "merge", 
+                        mask_source_radio = "type what to detect below", 
+                        remove_mode = "segment",   # ["segment", "rectangle"]
+                        remove_mask_extend = "10", 
+                        num_relation = 5,
+                        kosmos_input = None,
+                        cleaner_size_limit = -1,
+                        )
+    
+    output_images = run_rets[0]
+    if len(output_images) > 0:
+        return output_images[-2]
+
 # usage: 
 #       python app_cli.py --input_image dog.png --text dog --output_image dog_remove.png
 
@@ -96,7 +126,7 @@ if __name__ == '__main__':
     logger.info(f'\nargs={args}\n')
 
     logger.info(f'loading models ... ')
-    set_device(args)  # If you have enough GPUs, you can open this comment
+    #set_device(args)  # If you have enough GPUs, you can open this comment
     load_groundingdino_model(args.cuda)
     load_sam_model(device)
     # load_sd_model(device)
