@@ -28,7 +28,7 @@ setup(
     description=DESCRIPTION,
     long_description_content_type="text/markdown",
     long_description=long_description,
-    ackages=find_packages(),
+    packages=find_packages(),
     install_requires=load_requirements(),
     python_requires=">=3.7",
     classifiers=[
